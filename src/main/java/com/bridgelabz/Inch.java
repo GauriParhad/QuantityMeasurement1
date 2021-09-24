@@ -1,25 +1,25 @@
 package com.bridgelabz;
 
 public class Inch {
-    private final double value;
+    private double value;
 
-    public Inch(double value) {
-        this.value=value;
+    public Inch(double inch) {
+        this.value = inch;
     }
 
-    boolean lengthcomparison(double ft, double in) {
-        ft = 12 * ft;
+    public Inch() {
+    }
+
+    public boolean lengthComparison(double in, int ft) {
+        ft = ft * 12;
         return ft == in;
     }
 
     @Override
-    public boolean equals(Object o){
-        if(this == o)
-            return true;
-        if(o == null||getClass()!=o.getClass())
-            return false;
-        Inch inch= (Inch) o;
-        return Double.compare(inch.value, value)==0;
-
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Inch inch = (Inch) o;
+        return Double.compare(inch.value, value) == 0;
     }
 }
