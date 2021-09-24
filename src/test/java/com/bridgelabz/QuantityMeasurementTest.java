@@ -36,8 +36,8 @@ public class QuantityMeasurementTest {
     void givenFeetAndFeetFromDiffRef_WhenNotEqual_ShouldReturnFalse() {
         Feet feet1 = new Feet(0.0);
         Feet feet2 = new Feet(0.0);
-        boolean actual = feet1 == feet2;
-        Assertions.assertFalse(actual);
+        boolean a = feet1.equals(feet2);
+        Assertions.assertFalse(a);
     }
 
     @Test
@@ -50,16 +50,16 @@ public class QuantityMeasurementTest {
     @Test
     void givenInchAndInchFromSameRef_WhenEqual_ShouldReturnTrue() {
         Inch inch1 = new Inch(0.0);
-        boolean actual = true;
-        Assertions.assertTrue(actual);
+        boolean a = true;
+        Assertions.assertTrue(a);
     }
 
     @Test
     void givenInchAndInchFromDiffRef_WhenNotEqual_ShouldReturnFalse() {
         Inch inch1 = new Inch(0.0);
         Inch inch2 = new Inch(0.0);
-        boolean actual = inch1 == inch2;
-        Assertions.assertFalse(actual);
+        boolean a = inch1.equals(inch2);
+        Assertions.assertFalse(a);
     }
 
     @Test
